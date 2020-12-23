@@ -194,3 +194,28 @@ while True:
         Thread(target = airodumpdatabase).start()
         Thread(target = channelhop).start()
         Thread(target = sniff(iface=interface, prn = AddressScan)).start()
+    if menu == "4":
+        list1 = []
+        list2 = []
+        file1 = input("Enter the name of your first output file. \n")
+        file2 = input("Enter the name of your second output file. \n")
+        savedfile = input("If you would likw to save the matches to a file enter a file name. \n")
+        f1 = open(file1, "r")
+        f2 = open(file2, "r")
+        #Check to see if the user wants to save a file. Otherwise youget an error.
+        if savedfile != "":
+            nf = open(savedfile,"a")
+        for line in f1:
+            list1.append(line.lower()[:17])
+        f1.close()
+        for line in f2:
+            list2.append(line.lower()[:17])
+        f2.close()
+        for line in set(list1).intersection(list2):
+            print(line)
+            if savedfile != "":
+                nf.write(line)
+        input("Press enter to return to menu.")
+        os.system("clear")
+        
+
