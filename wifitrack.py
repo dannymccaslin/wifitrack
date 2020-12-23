@@ -15,7 +15,18 @@ lat = 0.0
 lon = 0.0
 #Menu display. Title font uses a figlet font named Bloody. Requires utf coding
 def displaymenu():
-    global ModuleNotFoundErrormenu = raw_input("\n\
+    global menu 
+    menu = input("\n\
+ █     █░ ██▓  █████▒██▓▄▄▄█████▓ ██▀███   ▄▄▄       ▄████▄   ██ ▄█▀\n\
+▓█░ █ ░█░▓██▒▓██   ▒▓██▒▓  ██▒ ▓▒▓██ ▒ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ \n\
+▒█░ █ ░█ ▒██▒▒████ ░▒██▒▒ ▓██░ ▒░▓██ ░▄█ ▒▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ \n\
+░█░ █ ░█ ░██░░▓█▒  ░░██░░ ▓██▓ ░ ▒██▀▀█▄  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ \n\
+░░██▒██▓ ░██░░▒█░   ░██░  ▒██▒ ░ ░██▓ ▒██▒ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄\n\
+░ ▓░▒ ▒  ░▓   ▒ ░   ░▓    ▒ ░░   ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒\n\
+  ▒ ░ ░   ▒ ░ ░      ▒ ░    ░      ░▒ ░ ▒░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░\n\
+  ░   ░   ▒ ░ ░ ░    ▒ ░  ░        ░░   ░   ░   ▒   ░        ░ ░░ ░ \n\
+    ░     ░          ░              ░           ░  ░░ ░      ░  ░   \n\
+                                                    ░               \n\
         To continue, type a number and press enter:\n\
     * * * * * * * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * \n\
         Choose an option:\n\
@@ -217,5 +228,5 @@ while True:
                 nf.write(line)
         input("Press enter to return to menu.")
         os.system("clear")
-        
+
 
